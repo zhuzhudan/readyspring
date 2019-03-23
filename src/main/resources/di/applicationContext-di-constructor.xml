@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student_cons" class="com.study.spring.ready.di.Student">
+        <constructor-arg index="0" type="java.lang.String" value="李四"></constructor-arg>
+        <constructor-arg index="1" type="com.study.spring.ready.di.School" ref="school_cons"></constructor-arg>
+    </bean>
+    <bean id="school_cons" class="com.study.spring.ready.di.School"></bean>
+</beans>

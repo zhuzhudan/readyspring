@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="applicationContext-di-constructor.xml"></import>
+    <bean id="school" class="com.study.spring.ready.di.School"></bean>
+    <bean id="student" class="com.study.spring.ready.di.Student">
+        <property name="name" value="张三"></property>
+        <property name="age" value="20"></property>
+        <!--<property name="school" ref="school"></property>-->
+        <property name="school">
+            <ref bean="school"></ref>
+        </property>
+
+        <property name="lists">
+            <list>
+                <value>list1</value>
+                <ref bean="school"></ref>
+                <value>list2</value>
+            </list>
+        </property>
+        <property name="sets">
+            <list>
+                <value>set1</value>
+                <ref bean="school"></ref>
+                <value>set2</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="m1">
+                    <value>map1</value>
+                </entry>
+                <entry key="m2">
+                    <ref bean="school"></ref>
+                </entry>
+            </map>
+        </property>
+
+    </bean>
+</beans>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--一次性加载-->
+    <import resource="ioc/applicationContext-createobject.xml"/>
+    <import resource="ioc/applicationContext-createobject-staticmethod.xml"></import>
+    <import resource="ioc/applicationContext-createobjcet-instatncefactory.xml"></import>
+</beans>

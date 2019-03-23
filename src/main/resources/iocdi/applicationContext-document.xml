@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="documentManger" class="com.study.spring.ready.iocdi.DocumentManager">
+        <constructor-arg index="0" ref="wordDocument"></constructor-arg>
+    </bean>
+
+    <bean id="pdfDocument" class="com.study.spring.ready.iocdi.WordDocument"></bean>
+    <bean id="wordDocument" class="com.study.spring.ready.iocdi.ExcelDocument"></bean>
+    <bean id="excelDoument" class="com.study.spring.ready.iocdi.ExcelDocument"></bean>
+</beans>
